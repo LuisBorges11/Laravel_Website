@@ -1,66 +1,96 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bem-vindo ao projeto Laravel Website. Este projeto é um exemplo de aplicação web desenvolvida com o framework PHP Laravel. Ele inclui funcionalidades básicas de uma aplicação web moderna, incluindo autenticação de usuários, gerenciamento de conteúdo e uma interface de administração.
 
-## About Laravel
+## Descrição
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O Laravel Website é uma plataforma que permite aos usuários visualizar e interagir com conteúdo dinâmico. Ele inclui um sistema de autenticação robusto, gerenciamento de usuários, e uma interface de administração para gerenciar o conteúdo do site.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Autenticação de Usuários**: Registro, login, logout e recuperação de senha.
+- **Gerenciamento de Conteúdo**: Criação, edição e exclusão de artigos e páginas.
+- **Painel de Administração**: Interface dedicada para administradores gerenciarem o site.
+- **Sistema de Comentários**: Usuários podem comentar em artigos e páginas.
+- **SEO Otimizado**: URLs amigáveis e metadados configuráveis.
 
-## Learning Laravel
+## Requisitos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 7.3 ou superior
+- Composer
+- Banco de Dados: MySQL, PostgreSQL ou SQLite
+- Servidor Web: Apache ou Nginx
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Como Usar
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clone este repositório para sua máquina local.
+    ```bash
+    git clone https://github.com/seuusuario/laravel_website.git
+    ```
+2. Navegue até o diretório do projeto.
+    ```bash
+    cd laravel_website
+    ```
+3. Instale as dependências do projeto.
+    ```bash
+    composer install
+    ```
+4. Copie o arquivo de exemplo `.env` e configure suas credenciais de banco de dados.
+    ```bash
+    cp .env.example .env
+    ```
+    Configure o arquivo `.env` com suas credenciais de banco de dados.
+    ```ini
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel_website
+    DB_USERNAME=seuusuario
+    DB_PASSWORD=suasenha
+    ```
+5. Gere a chave da aplicação.
+    ```bash
+    php artisan key:generate
+    ```
+6. Execute as migrações do banco de dados.
+    ```bash
+    php artisan migrate
+    ```
+7. Execute as sementes do banco de dados (opcional).
+    ```bash
+    php artisan db:seed
+    ```
+8. Inicie o servidor de desenvolvimento.
+    ```bash
+    php artisan serve
+    ```
+9. Abra o navegador e acesse `http://localhost:8000` para visualizar o site.
 
-## Laravel Sponsors
+## Estrutura do Projeto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **/app**: Contém a lógica da aplicação.
+  - **Http**: Controladores, Middlewares e Requests.
+  - **Models**: Modelos de Eloquent.
+- **/config**: Arquivos de configuração.
+- **/database**: Migrações e seeders.
+- **/public**: Arquivos públicos acessíveis pela web.
+- **/resources**: Views, CSS, JS e outros recursos.
+- **/routes**: Arquivos de rotas.
+- **/storage**: Arquivos gerados pela aplicação, como logs.
+- **/tests**: Testes automatizados.
 
-### Premium Partners
+## Contribuição
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o Laravel Website.
 
-## Contributing
+## Licença
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Code of Conduct
+## Contato
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Para mais informações, entre em contato:
 
-## Security Vulnerabilities
+- Email: filipefigueiredo39@gmail.com
+- LinkedIn: [Luis Borges](https://www.linkedin.com/in/luis-figueiredo-232897258)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
